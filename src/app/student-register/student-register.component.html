@@ -1,0 +1,225 @@
+<!-- <div class="container table-responsive-sm">
+  <div class="page-header">
+    <hr class="bg-info">
+    <h1>Volunteer Information</h1>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr style="background-color: #c3e6cb">
+        <th scope="col">Volunteer Name</th>
+        <th scope="col">E-mail</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let user of users">
+     <tr>
+         <td> {{user.username}} </td>
+         <td> {{user.email}} </td>
+     </tr>
+     </tbody>
+  </table>
+</div> -->
+<!-- <div class="row">
+  <div class="col-md-6 offset-md-3 mt-4">
+      <h2>Register</h2>
+
+  <form class="needs-validation" #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)">
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="studentname" id="studentname" placeholder="Studentname" aria-describedby="inputGroupPrepend" required ngModel #studentname>
+          <div class="invalid-feedback">
+            Please enter your name.
+          </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="date" class="form-control" name="dob" id="dob" placeholder="Date of Birth" aria-describedby="inputGroupPrepend" required ngModel #dob>
+          <div class="invalid-feedback">
+            Please enter Date of Birth.
+          </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="pname" id="validationCustomParentname" placeholder="Parent Name" aria-describedby="inputGroupPrepend" required ngModel>
+          <div class="invalid-feedback">
+            Please Parent name.
+          </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="gender" id="gender" placeholder="Enter Gender" aria-describedby="inputGroupPrepend" required ngModel #gender>
+          <div class="invalid-feedback">
+            Please Enter Gender.
+          </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="edu" id="edu" placeholder="Eduction/Class" aria-describedby="inputGroupPrepend" required ngModel #edu>
+          <div class="invalid-feedback">
+            Please Enter Class Studying.
+          </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="schoolname" id="schoolname" placeholder="School Name" aria-describedby="inputGroupPrepend" required ngModel #schoolname>
+          <div class="invalid-feedback">
+            Please Enter School Name.
+          </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="contact" id="contact" placeholder="Mobile Number" aria-describedby="inputGroupPrepend" required ngModel #contact>
+          <div class="invalid-feedback">
+            Please Enter Parent Contact Number.
+          </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" >Submit form</button>
+    <button class="btn btn-primary" type="reset" >Reset form</button>
+  </form>
+</div>
+</div> -->
+<!-- <div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <h2>Register</h2>
+
+    <form  class="needs-validation" #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)">
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" name="username" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required ngModel #username>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input type="email" class="form-control" name="email" id="validationCustom03" placeholder="ac3@gmail.com" required ngModel>
+            <div class="invalid-feedback">
+              Please provide email-id
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-lock"></i></span>
+            </div>
+            <input type="text" class="form-control" name="password" id="validationCustom04" placeholder="Creat Password" required ngModel #passowrd>
+            <div class="invalid-feedback">
+              Please provide password!
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" >Submit form</button>
+      <button class="btn btn-primary" type="reset" >Reset form</button>
+    </form>
+  </div>
+</div> -->
+<div class="container-fluid">
+  <div class="modal-header border-0">
+    <button type="button" class="close" aria-label="Close" (click)="closeModel()" style="margin-left: 94%;">
+      <span class="material-icons">
+        highlight_off
+        </span>
+    </button>
+  </div>
+  <div class="row">
+    <div class="col text-center header">
+      <h1 class="mb-0 mainHeader">{{ modalTitle }}</h1>
+    </div>
+  </div>
+  <div class="p-4">
+    <div class="mt-4">
+      <form [formGroup]="loginform" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  f.studentname.touched && f.studentname.dirty && !f.studentname.valid
+              }"
+              type="text"
+              class="form-control"
+              formControlName="studentname"
+              placeholder="Student Name"
+              autocomplete="off"
+            />
+          <div *ngIf="f.studentname.touched && !f.studentname.valid">
+            <small *ngIf="f.studentname.errors?.required" class="text-danger">
+              studentname is mandatory.</small
+            >
+          </div>
+        </div>
+        <div class="form-group">
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  f.parentname.touched && f.parentname.dirty && !f.parentname.valid
+              }"
+              type="text"
+              class="form-control"
+              formControlName="parentname"
+              placeholder="Parent Name"
+              autocomplete="off"
+            />
+          <div *ngIf="f.parentname.touched && !f.parentname.valid">
+            <small class="text-danger"> parentname is mandatory.</small>
+          </div>
+        </div>
+        <div class="form-group">
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  f.dob.touched && f.dob.dirty && !f.dob.valid
+              }"
+              type="date"
+              class="form-control"
+              formControlName="dob"
+              placeholder="Date Of Birth"
+              autocomplete="off"
+            />
+          <div *ngIf="f.dob.touched && !f.dob.valid">
+            <small class="text-danger"> dob is mandatory.</small>
+          </div>
+        </div>
+        <div class="form-group mb-0">
+          <div class="row">
+            <div class="col text-center">
+              <button
+                type="submit"
+                class="btn btn-success px-4"
+                [disabled]="!loginform.valid"
+              >
+                <span
+                  *ngIf="this.loadingContent == true"
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                <span *ngIf="this.loadingContent == false">Submit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
